@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		BDE009EE236ABCB0008015CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE009ED236ABCB0008015CE /* AppDelegate.swift */; };
 		BDE009F0236ABCB0008015CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE009EF236ABCB0008015CE /* SceneDelegate.swift */; };
-		BDE009F2236ABCB0008015CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE009F1236ABCB0008015CE /* ViewController.swift */; };
+		BDE009F2236ABCB0008015CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE009F1236ABCB0008015CE /* MainViewController.swift */; };
 		BDE009F5236ABCB0008015CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE009F3236ABCB0008015CE /* Main.storyboard */; };
 		BDE009F7236ABCB1008015CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE009F6236ABCB1008015CE /* Assets.xcassets */; };
 		BDE009FA236ABCB1008015CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDE009F8236ABCB1008015CE /* LaunchScreen.storyboard */; };
+		BDE00A08236AC169008015CE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00A07236AC169008015CE /* MainPresenter.swift */; };
+		BDE00A0A236AC181008015CE /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE00A09236AC181008015CE /* MainRouter.swift */; };
+		BDF56CE923751576002DFF63 /* MainGetColorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF56CE823751576002DFF63 /* MainGetColorInteractor.swift */; };
+		BDF56CEB23751CD0002DFF63 /* MainGetFontInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF56CEA23751CD0002DFF63 /* MainGetFontInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BDE009EA236ABCB0008015CE /* viper_sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = viper_sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDE009ED236ABCB0008015CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDE009EF236ABCB0008015CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDE009F1236ABCB0008015CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDE009F1236ABCB0008015CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BDE009F4236ABCB0008015CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDE009F6236ABCB1008015CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDE009F9236ABCB1008015CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDE009FB236ABCB1008015CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDE00A07236AC169008015CE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		BDE00A09236AC181008015CE /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		BDF56CE823751576002DFF63 /* MainGetColorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGetColorInteractor.swift; sourceTree = "<group>"; };
+		BDF56CEA23751CD0002DFF63 /* MainGetFontInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGetFontInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,67 @@
 		BDE009EC236ABCB0008015CE /* viper_sample */ = {
 			isa = PBXGroup;
 			children = (
+				BDE00A01236ABCB8008015CE /* Main */,
 				BDE009ED236ABCB0008015CE /* AppDelegate.swift */,
 				BDE009EF236ABCB0008015CE /* SceneDelegate.swift */,
-				BDE009F1236ABCB0008015CE /* ViewController.swift */,
 				BDE009F3236ABCB0008015CE /* Main.storyboard */,
 				BDE009F6236ABCB1008015CE /* Assets.xcassets */,
 				BDE009F8236ABCB1008015CE /* LaunchScreen.storyboard */,
 				BDE009FB236ABCB1008015CE /* Info.plist */,
 			);
 			path = viper_sample;
+			sourceTree = "<group>";
+		};
+		BDE00A01236ABCB8008015CE /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BDE00A06236ABCE1008015CE /* View */,
+				BDE00A05236ABCDA008015CE /* Interactor */,
+				BDE00A02236ABCC0008015CE /* Presenter */,
+				BDE00A04236ABCD0008015CE /* Entity */,
+				BDE00A03236ABCC7008015CE /* Router */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BDE00A02236ABCC0008015CE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDE00A07236AC169008015CE /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDE00A03236ABCC7008015CE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				BDE00A09236AC181008015CE /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		BDE00A04236ABCD0008015CE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		BDE00A05236ABCDA008015CE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				BDF56CE823751576002DFF63 /* MainGetColorInteractor.swift */,
+				BDF56CEA23751CD0002DFF63 /* MainGetFontInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		BDE00A06236ABCE1008015CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDE009F1236ABCB0008015CE /* MainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDE009F2236ABCB0008015CE /* ViewController.swift in Sources */,
+				BDE00A0A236AC181008015CE /* MainRouter.swift in Sources */,
+				BDF56CE923751576002DFF63 /* MainGetColorInteractor.swift in Sources */,
+				BDE009F2236ABCB0008015CE /* MainViewController.swift in Sources */,
 				BDE009EE236ABCB0008015CE /* AppDelegate.swift in Sources */,
+				BDF56CEB23751CD0002DFF63 /* MainGetFontInteractor.swift in Sources */,
 				BDE009F0236ABCB0008015CE /* SceneDelegate.swift in Sources */,
+				BDE00A08236AC169008015CE /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B74D6C3L5;
 				INFOPLIST_FILE = viper_sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7B74D6C3L5;
 				INFOPLIST_FILE = viper_sample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
